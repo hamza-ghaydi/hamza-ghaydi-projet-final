@@ -177,13 +177,15 @@
 
 .skils {
     display: flex;
-    flex-grow: 200;
+    flex-wrap: wrap;
     gap: 1vw;
     padding: 4vw 0vw;
     padding-bottom: 10vh;
 }
 
 .skil-box {
+    flex-grow: 4;
+    flex-basis: 20vw;
     padding: 2vw;
     border-radius: 10px;
     background-color: #ffffff;
@@ -199,6 +201,7 @@
 .skil-box>p:nth-child(3) {
     text-align: end;
     font-weight: 600;
+    margin-top: 20px;
 }
 
 .skil-box>div {
@@ -208,12 +211,125 @@
 .skil-box>div>progress {
     width: 100%;
 }
+progress{
+    background-color: transparent;
+    height: 8px;
+}
+progress::-webkit-progress-bar {
+    background-color: #e8753244 !important; /* Background color */
+    border-radius: 10px;
+}
+progress::-webkit-progress-value {
+    background-color: $orange; /* Progress color */
+    border-radius: 10px;
+}
+progress::-moz-progress-bar {
+    background-color: #007bff; /* Progress color */
+    border-radius: 10px;
+}
 
-// progress[value] { 
-//     color: $orange !important;
-//     background-color: #e8753243 !important;
-//     -webkit-animation-delay: 0.5s !important;
-//     -webkit-appearance: none !important;
-//     -moz-appearance: none;
-//     appearance: none;
-// }
+.portfolio{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1vw;
+    gap: 1vw;
+}
+.portfolio>h2 {
+    font-size: 42px;
+    font-weight: 700;
+    color: #7F503B;
+    font-family: "roboto";
+}
+
+.portfolio>p {
+    width: 40% ;
+    text-align: center;
+    padding: 20px;
+}
+
+
+// tabs
+
+
+.tabs {
+    overflow: hidden;
+    text-align: center;
+    padding: 2vh;
+
+}
+
+.tabs input {
+    display: none;
+}
+
+.tabs label {
+    display: inline-block;
+    width: calc(80% / 5);
+    padding: 15px;
+    cursor: pointer;
+    background: #ddd;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.tabs input:checked + label {
+    background: #007bff;
+    color: white;
+}
+
+.content {
+    display: none;
+    padding: 20px;
+}
+
+#tab1:checked ~ #content2 ,
+#tab1:checked ~ #content3,
+#tab1:checked ~ #content4,
+#tab1:checked ~ #content5,
+#tab2:checked ~ #content2,
+#tab3:checked ~ #content3,
+#tab4:checked ~ #content4,
+#tab5:checked ~ #content5 {
+    display: block;
+}
+.porfolio-card{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+    align-items: start;
+    background-color: #ffff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+}
+.porfolio-card > img{
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+}
+.porfolio-card >div{
+    padding: 1vw;
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.porfolio-card >div> span{
+    color: $orange;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: "roboto";
+}
+.porfolio-card >div> h3{
+    font-size: 20px;
+    font-weight: 600px;
+    font-family: "roboto";
+    color: $heading;
+}
+
+.porfolio-card >div> p{
+    font-family: "roboto";
+    font-size: 15px;
+    font-weight: 300;
+}
