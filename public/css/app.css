@@ -11845,6 +11845,10 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+body {
+  background-color: #FAF9FB;
+}
+
 .hero-secion {
   height: 90vh;
 }
@@ -12083,7 +12087,7 @@ progress::-moz-progress-bar {
   justify-content: center;
   align-items: center;
   padding: 1vw;
-  gap: 1vw;
+  gap: 1vh;
 }
 
 .portfolio > h2, .portfolio > .h2 {
@@ -12094,7 +12098,7 @@ progress::-moz-progress-bar {
 }
 
 .portfolio > p {
-  width: 40%;
+  width: 60%;
   text-align: center;
   padding: 20px;
 }
@@ -12105,23 +12109,23 @@ progress::-moz-progress-bar {
   padding: 2vh;
 }
 
-.tabs input {
+.tabs > input {
   display: none;
 }
 
-.tabs label {
+.tabs > label {
   display: inline-block;
-  width: 16%;
-  padding: 15px;
+  width: 10%;
+  padding: 10px;
   cursor: pointer;
-  background: #ddd;
   font-weight: bold;
-  transition: 0.3s;
+  transition: 0.5s;
 }
 
-.tabs input:checked + label {
-  background: #007bff;
+.tabs > input:checked + label {
+  background-color: #e87532;
   color: white;
+  border-radius: 50px;
 }
 
 .content {
@@ -12131,17 +12135,21 @@ progress::-moz-progress-bar {
 
 #tab1:checked ~ #content2,
 #tab1:checked ~ #content3,
-#tab1:checked ~ #content4,
-#tab1:checked ~ #content5,
+#tab1:checked ~ div > #content4,
+#tab1:checked ~ div > #content5,
 #tab2:checked ~ #content2,
 #tab3:checked ~ #content3,
-#tab4:checked ~ #content4,
-#tab5:checked ~ #content5 {
+#tab4:checked ~ div > #content4,
+#tab5:checked ~ div > #content5 {
   display: block;
 }
 
-.porfolio-card {
+#tab4:checked ~ div > #content4,
+#tab5:checked ~ div > #content5 {
   width: 50%;
+}
+
+.porfolio-card {
   display: flex;
   flex-direction: column;
   gap: 1vh;
@@ -12182,6 +12190,245 @@ progress::-moz-progress-bar {
   font-family: "roboto";
   font-size: 15px;
   font-weight: 300;
+}
+
+.testemonial {
+  display: flex;
+  align-items: center;
+  gap: 1vw;
+}
+
+.avis {
+  padding: 3vw;
+}
+
+.carousel-item {
+  padding: 2vw;
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+}
+
+.testemonial > div {
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  gap: 1vh;
+}
+
+.testemonial > img {
+  width: 30%;
+  border-radius: 10px;
+}
+
+.infos-testmonial {
+  display: flex;
+  align-items: center;
+  gap: 1vw;
+}
+
+.infos-testmonial > img {
+  width: 3vw;
+  border-radius: 50%;
+}
+
+.carousel-icons {
+  transform: translate(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20%;
+  position: absolute;
+  height: 3vw;
+  align-self: center;
+  border-radius: 50%;
+  top: 105%;
+  left: 50% !important;
+  right: 50%;
+}
+
+.carousel-icons > button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #e87532;
+}
+
+.service-title {
+  width: 70vw;
+}
+
+.service-title > h2, .service-title > .h2 {
+  font-family: "roboto";
+  font-weight: 700;
+  font-size: 32px;
+  color: #0f2943;
+}
+
+.service-title > a {
+  border: 1px solid #e87532;
+  border-radius: 50px;
+  padding: 1vh 2vw;
+  color: #e87532;
+}
+
+.service-title > a:hover {
+  background-color: #e87532;
+  color: #ffffff;
+}
+
+.service-item {
+  background-color: #ffffff;
+  width: 25vw;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.service-item > i {
+  font-size: 2.5rem;
+  color: #e87532;
+}
+
+.service-item > h3, .service-item > .h3 {
+  font-size: 1.25rem;
+  font-family: "roboto";
+  font-weight: 400 !important;
+}
+
+.accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+}
+
+.accordion-item {
+  padding: 0;
+  border-radius: 10px;
+}
+
+.accordion-body {
+  background-color: rgba(232, 117, 50, 0.1058823529);
+  border-radius: 0 0 10px 10px;
+}
+
+.accordion-header > button {
+  box-shadow: none !important;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: rgba(232, 117, 50, 0.1058823529);
+  color: #e87532;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 10px 10px 0 0;
+  box-shadow: none;
+}
+
+.contact > h6, .contact > .h6 {
+  font-family: "roboto";
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.contact > h2, .contact > .h2 {
+  font-family: "roboto";
+  color: #0f2943;
+  font-weight: 700;
+  line-height: 1.2;
+  font-size: 3rem;
+}
+
+.infos-contact {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.infos-contact > i {
+  font-size: 1.4rem;
+  color: #e87532;
+}
+
+.contact > a {
+  text-decoration: none;
+  color: #0f2943;
+  font-weight: 500;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 1vw;
+  margin-top: 10px;
+  font-family: "questrial";
+}
+
+.contact > a:hover {
+  color: #e87532;
+}
+
+form {
+  width: 50%;
+  padding: 3rem;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 1.5vw;
+  border-radius: 10px;
+}
+
+form > input, form > textarea {
+  width: 100%;
+  padding: 1.5vh;
+  border-radius: 8px;
+  border: #e5e5e5 1px solid;
+}
+
+form > input:focus, form > textarea:focus {
+  border-color: color-mix(in srgb, #e87532, transparent 50%);
+  box-shadow: 0 0 0 0.25rem color-mix(in srgb, #e87532, transparent 90%);
+  outline: none;
+}
+
+form > button {
+  width: 100%;
+  padding: 1vh;
+  background-color: #e87532;
+  border-radius: 10px;
+  border: none;
+  color: #ffffff;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3vw;
+  gap: 1vh;
+}
+
+.social-links {
+  display: flex;
+  align-items: center;
+  gap: 1vw;
+}
+
+.social-links > i {
+  font-size: 1rem;
+  color: rgba(10, 15, 20, 0.3529411765);
+  border: 1px rgba(10, 15, 20, 0.3529411765) solid;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer > p > span {
+  color: #e87532;
+  font-weight: 700;
 }
 
 /*# sourceMappingURL=app.css.map */
