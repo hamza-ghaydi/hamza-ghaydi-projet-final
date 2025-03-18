@@ -1,0 +1,129 @@
+
+.portfolio{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1vw;
+    gap: 1vh;
+}
+.portfolio>h2 {
+    font-size: 42px;
+    font-weight: 700;
+    color: #7F503B;
+    font-family: "roboto";
+}
+
+.portfolio>p {
+    width: 60% ;
+    text-align: center;
+    padding: 20px;
+}
+
+
+// tabs
+
+
+.tabs {
+    overflow: hidden;
+    text-align: center;
+    padding: 2vh;
+
+}
+
+.tabs > input {
+    display: none;
+}
+
+.tabs > label {
+    display: inline-block;
+    width: calc(50% / 5);
+    padding: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.5s;
+}
+
+.tabs > input:checked + label {
+    background-color: $orange;
+    color: white;
+    border-radius: 50px;
+}
+
+.content {
+    display: none;
+    padding: 20px;
+}
+
+#tab1:checked ~ #content2 ,
+#tab1:checked ~ #content3,
+#tab1:checked ~ div > #content4,
+#tab1:checked ~ div > #content5,
+#tab2:checked ~ #content2,
+#tab3:checked ~ #content3,
+#tab4:checked ~ div > #content4,
+#tab5:checked ~ div > #content5 {
+    display: block;
+}
+#tab4:checked ~ div > #content4,
+#tab5:checked ~ div > #content5{
+    width: 50%;
+}
+.porfolio-card{
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+    align-items: start;
+    background-color: #ffff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+}
+.porfolio-card > img{
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+}
+.porfolio-card >div{
+    padding: 1vw;
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.porfolio-card >div> span{
+    color: $orange;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: "roboto";
+}
+.porfolio-card >div> h3{
+    font-size: 20px;
+    font-weight: 600px;
+    font-family: "roboto";
+    color: $heading;
+}
+
+.porfolio-card >div> p{
+    font-family: "roboto";
+    font-size: 15px;
+    font-weight: 300;
+}
+
+@media (max-width:480px) {
+    .portfolio>p {
+        width: 90% !important;
+    }
+
+    .tabs>label {
+        width: 30% !important;
+    }
+
+    .porfolio-card {
+        margin-bottom: 2vw !important;
+    }
+
+    #tab4:checked~div>#content4,
+    #tab5:checked~div>#content5 {
+        width: 100% !important;
+    }
+
+}

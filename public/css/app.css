@@ -11845,12 +11845,120 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
-body {
+header {
+  padding: 20px;
+  z-index: 999;
+  display: flex;
+  align-items: center !important;
+  position: sticky;
+  top: 0;
   background-color: #FAF9FB;
 }
 
+.header-containe {
+  width: 90vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  padding: 1vh 3vw;
+  border-radius: 50px;
+}
+
+.header-containe > a {
+  font-size: 24px;
+  font-weight: 500;
+  color: #0f2943;
+  font-family: "questrial";
+  text-decoration: none;
+}
+
+.navigation {
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 3vw;
+}
+
+nav > a {
+  text-decoration: none;
+  font-size: 1rem;
+  font-family: "roboto";
+  color: #0f2943;
+}
+
+nav > a:active {
+  color: #e87532;
+}
+
+nav > a:hover {
+  color: #e87532;
+}
+
+.social-header {
+  display: flex;
+  align-items: center;
+  gap: 1VW;
+  color: #8b8b8b;
+}
+
+.social-header > i:hover {
+  color: #e87532;
+}
+
+#menu, .navigation > label, nav > label {
+  display: none;
+}
+
+@media (max-width: 480px) {
+  .navigation > label, nav > label {
+    display: block;
+  }
+  .header-containe {
+    width: 100%;
+  }
+  .navigation {
+    width: 40%;
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+  nav {
+    position: fixed;
+    flex-direction: column;
+    background-color: #FAF9FB;
+    width: 100%;
+    height: 100%;
+    align-items: start;
+    padding: 1vh 3vw;
+    top: 0;
+    transition: 0.5s;
+    right: -200%;
+    gap: 5vw !important;
+  }
+  nav > label {
+    width: 100%;
+    text-align: end;
+  }
+  #menu:checked + nav {
+    right: 0;
+    padding-top: 10%;
+  }
+  .social-header {
+    gap: 3vw;
+  }
+}
 .hero-secion {
-  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10vh 0;
+  gap: 2vw;
 }
 
 .hero-secion > img {
@@ -11920,6 +12028,38 @@ body {
   font-weight: 400;
 }
 
+@media (max-width: 480px) {
+  .hero-secion {
+    flex-direction: column;
+    padding: 3vh 0;
+  }
+  .left > h1, .left > .h1, .left > p {
+    text-align: center;
+  }
+  .dbl-btn {
+    flex-direction: column;
+    gap: 2vw !important;
+  }
+  .dbl-btn > a {
+    display: block;
+    width: 100% !important;
+    text-align: center;
+  }
+  .dbl-btn > a:first-child {
+    margin-bottom: 1vw;
+  }
+  .stats {
+    justify-content: center;
+    padding: 3vh 0;
+    gap: 5vw;
+  }
+  .stats-item {
+    align-items: center;
+  }
+  .hero-secion > img {
+    width: 100%;
+  }
+}
 .about {
   display: flex;
   flex-direction: column;
@@ -11949,6 +12089,13 @@ body {
   margin: auto;
   color: #e87532;
   opacity: 0.5;
+}
+
+.about-sec {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3vw;
 }
 
 .about-sec > img {
@@ -12033,8 +12180,7 @@ body {
 }
 
 .skil-box {
-  flex-grow: 4;
-  flex-basis: 20vw;
+  width: calc(25% - 1vw);
   padding: 2vw;
   border-radius: 10px;
   background-color: #ffffff;
@@ -12081,6 +12227,33 @@ progress::-moz-progress-bar {
   border-radius: 10px;
 }
 
+@media (max-width: 480px) {
+  .about > p {
+    width: 80% !important;
+  }
+  .title-line {
+    width: 100px !important;
+  }
+  .about-sec {
+    flex-direction: column;
+    align-items: stretch !important;
+    justify-content: stretch !important;
+  }
+  .about-sec > img {
+    width: 100% !important;
+  }
+  .about-info {
+    width: 100% !important;
+    gap: 5vw !important;
+  }
+  .skil-box {
+    width: 100% !important;
+  }
+  .skils {
+    padding-inline: 2vw !important;
+    gap: 2vw;
+  }
+}
 .portfolio {
   display: flex;
   flex-direction: column;
@@ -12192,6 +12365,21 @@ progress::-moz-progress-bar {
   font-weight: 300;
 }
 
+@media (max-width: 480px) {
+  .portfolio > p {
+    width: 90% !important;
+  }
+  .tabs > label {
+    width: 30% !important;
+  }
+  .porfolio-card {
+    margin-bottom: 2vw !important;
+  }
+  #tab4:checked ~ div > #content4,
+  #tab5:checked ~ div > #content5 {
+    width: 100% !important;
+  }
+}
 .testemonial {
   display: flex;
   align-items: center;
@@ -12252,6 +12440,21 @@ progress::-moz-progress-bar {
   height: 40px;
   border-radius: 50%;
   background-color: #e87532;
+}
+
+@media (max-width: 480px) {
+  .testemonial > img {
+    display: none;
+  }
+  .carousel-item {
+    padding: 3vw !important;
+  }
+  .infos-testmonial > img {
+    width: 20vw !important;
+  }
+}
+body {
+  background-color: #FAF9FB;
 }
 
 .service-title {

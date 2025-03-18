@@ -1,0 +1,75 @@
+// testemonial
+.testemonial{
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+}
+.avis{
+    padding: 3vw;
+}
+.carousel-item{
+    padding: 2vw;
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+}
+.testemonial > div{
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    gap: 1vh;
+}
+
+.testemonial > img{
+    width: 30%;
+    border-radius: 10px;
+}
+
+.infos-testmonial{
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+}
+.infos-testmonial > img{
+    width: 3vw;
+    border-radius: 50%;
+}
+
+
+
+.carousel-icons{
+    transform: translate(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20%;
+    position: absolute;
+    height: 3vw;
+    align-self: center;
+    border-radius: 50%;
+    top: 105%;
+    left: 50% !important;
+    right: 50%;
+}
+.carousel-icons > button{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: $orange;
+}
+
+
+
+
+
+@media (max-width:480px) {
+    .testemonial > img{
+        display: none;
+    }
+    .carousel-item{
+        padding: 3vw !important;
+    }
+    .infos-testmonial > img {
+        width: 20vw !important;
+    }
+}

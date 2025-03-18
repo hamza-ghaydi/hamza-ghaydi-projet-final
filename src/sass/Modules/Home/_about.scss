@@ -1,0 +1,197 @@
+
+// about
+.about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #FAF9FB;
+    padding: 4vw;
+    gap: 1vw;
+}
+
+.about>h2 {
+    font-size: 42px;
+    font-weight: 700;
+    color: #7F503B;
+    font-family: "roboto";
+}
+
+.about>p {
+    width: 40%;
+    text-align: center;
+    padding: 20px;
+}
+
+.title-line {
+    width: 200px;
+    height: 20px;
+    margin: auto;
+    color: $orange;
+    opacity: 0.5;
+}
+.about-sec{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3vw;
+}
+
+.about-sec>img {
+    width: 50%;
+    border-radius: 15px;
+}
+
+.about-info {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+}
+
+.about-info>span {
+    color: $orange;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: "roboto";
+}
+
+.about-info>h2 {
+    font-family: "roboto";
+    font-weight: 700;
+    font-size: 32px;
+    color: $heading;
+}
+
+.about-info>p:nth-child(3) {
+    font-size: 1.1rem;
+    margin-bottom: 1vw;
+    font-weight: 300 !important;
+}
+
+.about-info>p:nth-child(4) {
+    font-weight: 500 !important;
+}
+
+.info-personel {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 1vw;
+    padding: 2vw;
+    background-color: #ffff;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.05);
+    border-radius: 15px;
+}
+
+.item-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.item-info>span:nth-child(1) {
+    font-size: 0.875rem;
+    font-family: "roboto";
+    font-weight: 300;
+}
+
+.item-info>span:nth-child(2) {
+    font-family: "roboto";
+    font-weight: 600;
+}
+
+.signatur>div>h4 {
+    font-size: 1.25rem;
+    color: $heading;
+}
+
+.signatur>div>p {
+    font-weight: 300;
+}
+
+.skils {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1vw;
+    padding: 4vw 0vw;
+    padding-bottom: 10vh;
+}
+
+.skil-box {
+    width: calc((100% / 4) - 1vw);
+    padding: 2vw;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+}
+
+.skil-box>h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    font-family: "roboto";
+}
+
+.skil-box>p:nth-child(3) {
+    text-align: end;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+.skil-box>div {
+    width: 100%;
+}
+
+.skil-box>div>progress {
+    width: 100%;
+}
+progress{
+    background-color: transparent;
+    height: 8px;
+}
+progress::-webkit-progress-bar {
+    background-color: #e8753244 !important; /* Background color */
+    border-radius: 10px;
+}
+progress::-webkit-progress-value {
+    background-color: $orange; /* Progress color */
+    border-radius: 10px;
+}
+progress::-moz-progress-bar {
+    background-color: #007bff; /* Progress color */
+    border-radius: 10px;
+}
+
+
+
+
+
+@media (max-width:480px) {
+    .about{
+    }
+    .about>p {
+        width: 80% !important;
+    }
+    .title-line {
+        width: 100px !important;
+    }
+    .about-sec{
+        flex-direction: column;
+        align-items: stretch !important;
+        justify-content: stretch !important;
+    }
+    .about-sec>img{
+        width: 100% !important;
+    }
+    .about-info{
+        width: 100% !important;
+        gap: 5vw !important;
+    }
+    .skil-box{
+        width: 100% !important;
+    }
+    .skils{
+        padding-inline: 2vw !important;
+        gap: 2vw;
+    }
+}
