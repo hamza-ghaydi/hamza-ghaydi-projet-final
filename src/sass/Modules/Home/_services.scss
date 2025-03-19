@@ -1,0 +1,50 @@
+// services
+.service-title{
+    width: 70vw;
+}
+.service-title > h2{
+    font-family: "roboto";
+    font-weight: 700;
+    font-size: 32px;
+    color: #0f2943;
+}
+.service-title > a{
+    border: 1px solid $orange;
+    border-radius: 50px;
+    padding: 1vh 2vw;
+    color: $orange;
+}
+
+.service-title > a:hover{
+    background-color: $orange;
+    color: #ffffff;
+}
+.service-item{
+    background-color: #ffffff;
+    width: 25vw;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+.service-item > i{
+    font-size: 2.5rem;
+    color: $orange;
+}
+.service-item > h3{
+    font-size: 1.25rem;
+    font-family: "roboto";
+    font-weight: 400 !important;
+}
+
+
+
+
+
+@media (max-width:480px) {
+    .service-title{
+        width: 100vw !important;
+    }
+    .service-item{
+        width: 100vw !important;
+    }
+}

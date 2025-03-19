@@ -1,0 +1,91 @@
+.contact{
+    width: 50vw;
+}
+
+.contact>h6{
+    font-family: "roboto";
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+.contact>h2{
+    font-family: "roboto";
+    color: $heading;
+    font-weight: 700;
+    line-height: 1.2;
+    font-size: 3rem;
+}
+
+.infos-contact{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.infos-contact > i{
+    font-size: 1.4rem;
+    color: $orange;
+}
+
+.contact >a{
+    text-decoration: none;
+    color: $heading;
+    font-weight: 500;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+    margin-top: 10px;
+    font-family: "questrial";
+}
+.contact >a:hover{
+    color: $orange;
+}
+
+form{
+    width: 50%;
+    padding: 3rem;
+    background-color: #ffff;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 1.5vw;
+    border-radius: 10px;
+}
+
+form > input , form > textarea{
+    width: 100%;
+    padding: 1.5vh;
+    border-radius: 8px;
+    border: #e5e5e5 1px solid;
+}
+form > input:focus , form > textarea:focus{
+
+    border-color: color-mix(in srgb, $orange, transparent 50%);
+    box-shadow: 0 0 0 0.25rem color-mix(in srgb, $orange, transparent 90%);
+    outline: none;
+}
+
+form > button {
+    width: 100%;
+    padding: 1vh;
+    background-color: $orange;
+    border-radius: 10px;
+    border: none;
+    color: #ffffff;
+}
+
+
+
+@media (max-width:480px) {
+    .contact{
+        width: 100vw 
+        !important;
+        margin-bottom: 3vh;
+    }
+    .contact > h2{
+        font-size: 2rem !important;
+    }
+    form{
+        width: 100% !important;
+    }
+    
+}

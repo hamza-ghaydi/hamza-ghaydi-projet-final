@@ -12453,10 +12453,6 @@ progress::-moz-progress-bar {
     width: 20vw !important;
   }
 }
-body {
-  background-color: #FAF9FB;
-}
-
 .service-title {
   width: 70vw;
 }
@@ -12499,6 +12495,14 @@ body {
   font-weight: 400 !important;
 }
 
+@media (max-width: 480px) {
+  .service-title {
+    width: 100vw !important;
+  }
+  .service-item {
+    width: 100vw !important;
+  }
+}
 .accordion {
   display: flex;
   flex-direction: column;
@@ -12527,6 +12531,10 @@ body {
   cursor: pointer;
   border-radius: 10px 10px 0 0;
   box-shadow: none;
+}
+
+.contact {
+  width: 50vw;
 }
 
 .contact > h6, .contact > .h6 {
@@ -12601,6 +12609,22 @@ form > button {
   border-radius: 10px;
   border: none;
   color: #ffffff;
+}
+
+@media (max-width: 480px) {
+  .contact {
+    width: 100vw !important;
+    margin-bottom: 3vh;
+  }
+  .contact > h2, .contact > .h2 {
+    font-size: 2rem !important;
+  }
+  form {
+    width: 100% !important;
+  }
+}
+body {
+  background-color: #FAF9FB;
 }
 
 footer {
